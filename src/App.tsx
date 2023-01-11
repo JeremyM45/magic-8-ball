@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MagicBall from './components/MagicBall';
+import QuestionForm from './components/QuestionForm';
 
 function App() {
     const [questionAsked, setQuestionAsked] = useState(false);
@@ -11,8 +12,11 @@ function App() {
                 <h1 className="text-3xl font-bold underline text-blue-600 text-center">
                     Magic 8 Ball
                 </h1>
-                
-                <div className='py-20' />
+                <div className='py-10' />
+                <QuestionForm 
+                    setQuestionAsked={setQuestionAsked}
+                />
+                <div className='py-10' />
                 <MagicBall 
                     response='Reply hazy, try again'
                     questionAsked={questionAsked}
