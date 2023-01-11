@@ -1,9 +1,10 @@
 import React from 'react'
 
-const QuestionForm = ({setQuestionAsked}: any) => {
+const QuestionForm = ({setQuestionAsked, setResponse}: any) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setQuestionAsked(true)
+        setQuestionAsked(true);
+        setResponse("");
     }
     
     return (
