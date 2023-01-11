@@ -1,4 +1,5 @@
 import React from 'react'
+import MagicBallDefault from './MagicBallDefault'
 
 interface MagicBallProps {
     response: string,
@@ -11,9 +12,7 @@ const MagicBall = ({response, questionAsked}: MagicBallProps)=> {
         
         <div className='bg-black w-[20rem] h-[20rem] rounded-full flex items-center justify-center'>
             {!questionAsked ? (
-                    <div className='bg-white w-[8rem] h-[8rem] rounded-full flex items-center justify-center'>
-                        <p className='font-bold text-6xl'>8</p>
-                    </div>
+                    <MagicBallDefault />
                 ) : (
                     <div className='w-[8rem] h-[8rem] rounded-full flex items-center justify-center'>
                         <p className='font-bold text-6xl text-white'>{response}</p>
