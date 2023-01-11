@@ -1,10 +1,16 @@
 import React from 'react'
 
-const QuestionForm = ({setQuestionAsked, setResponse}: any) => {
+const QuestionForm = ({setQuestionAsked, setResponse, responses}: any) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setQuestionAsked(true);
-        setResponse("");
+        setResponse(generateResponse);
+    }
+
+    const generateResponse = () => {
+        const resultTypeIndex = Math.floor(Math.random() * responses.length)
+        const resultIndex = Math.floor(Math.random() * responses[resultTypeIndex].length)
+        return responses[resultTypeIndex][resultIndex]
     }
     
     return (
