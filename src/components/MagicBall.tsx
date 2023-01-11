@@ -1,5 +1,6 @@
 import React from 'react'
 import MagicBallDefault from './MagicBallDefault'
+import MagicBallResponse from './MagicBallResponse'
 
 interface MagicBallProps {
     response: string,
@@ -14,9 +15,9 @@ const MagicBall = ({response, questionAsked}: MagicBallProps)=> {
             {!questionAsked ? (
                     <MagicBallDefault />
                 ) : (
-                    <div className='w-[8rem] h-[8rem] rounded-full flex items-center justify-center'>
-                        <p className='font-bold text-6xl text-white'>{response}</p>
-                    </div>
+                    <MagicBallResponse 
+                        response={response}
+                    />
                 )
             }
         </div>
