@@ -21,7 +21,7 @@ function App() {
         "Ask again later",
         "Better not tell you now",
         "Cannot predict now",
-        "Concentrate and ask again",
+        "Try again",
     ]
     const RESPONSES_NEGATIVE = [
         "Don’t count on it",
