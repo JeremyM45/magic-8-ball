@@ -16,7 +16,7 @@ const MagicBall = ({response, questionAsked}: MagicBallProps)=> {
                     </div>
                 ) : (
                     <div className='w-[8rem] h-[8rem] rounded-full flex items-center justify-center'>
-                        <p>{response}</p>
+                        <p className='font-bold text-6xl text-white'>{response}</p>
                     </div>
                 )
             }
