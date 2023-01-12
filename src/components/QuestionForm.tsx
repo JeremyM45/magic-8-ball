@@ -1,6 +1,12 @@
 import { useState } from 'react'
 
-const QuestionForm = ({setQuestionAsked, setResponse, responses}: any) => {
+interface QuestionForm {
+    setQuestionAsked: (bool: boolean) => void,
+    setResponse: (res: string) => void,
+    responses: string[][]
+}
+
+const QuestionForm = ({setQuestionAsked, setResponse, responses}: QuestionForm) => {
     const [question, setQuestion] = useState("");
     const [error, setError] = useState("");
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -8,7 +14,7 @@ const QuestionForm = ({setQuestionAsked, setResponse, responses}: any) => {
         if(question.length > 3)
         {
             setQuestionAsked(true);
-            setResponse(generateResponse);
+            setResponse(generateResponse());
             setError("")
         } else {
 
