@@ -13,11 +13,13 @@ const MagicBall = ({response, questionAsked}: MagicBallProps)=> {
         
         <div className='bg-black w-[20rem] h-[20rem] rounded-full flex items-center justify-center select-none'>
             {!questionAsked ? (
-                    <MagicBallDefault />
+                        <MagicBallDefault />
                 ) : (
-                    <MagicBallResponse 
-                        response={response}
-                    />
+                    
+                        <MagicBallResponse 
+                            response={response}
+                        />
+
                 )
             }
         </div>
