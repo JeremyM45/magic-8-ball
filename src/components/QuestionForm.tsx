@@ -16,7 +16,7 @@ const QuestionForm = ({setQuestionAsked, setResponse, responses}: any) => {
     
     return (
         <div className='flex items-center flex-col'>
-            <form className='flex flex-col gap-y-2 items-center' onSubmit={handleSubmit}>
+            <form className='flex flex-col gap-y-2 items-center select-none' onSubmit={handleSubmit}>
                 <input 
                     className='rounded-full px-3 text-2xl w-[20rem]' 
                     placeholder='Ask Your Question'
