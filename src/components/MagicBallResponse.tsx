@@ -1,6 +1,10 @@
 import React from 'react'
 
-const MagicBallResponse = ({response}: any) => {
+interface MagicBallResponse {
+    response: string
+}
+
+const MagicBallResponse = ({response}: MagicBallResponse) => {
     return (
         <div className='flex justify-center flex-col items-center animate-fade-in-down'>
             <div className='text-blue-900 text-[16rem] translate-y-[-2rem]'> &#9650;</div>
