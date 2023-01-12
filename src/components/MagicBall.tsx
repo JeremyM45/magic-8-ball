@@ -11,7 +11,7 @@ const MagicBall = ({response, questionAsked}: MagicBallProps)=> {
     
     return (
         
-        <div className='bg-black w-[20rem] h-[20rem] rounded-full flex items-center justify-center'>
+        <div className='bg-black w-[20rem] h-[20rem] rounded-full flex items-center justify-center select-none'>
             {!questionAsked ? (
                     <MagicBallDefault />
                 ) : (
