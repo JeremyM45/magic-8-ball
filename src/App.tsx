@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import AskNewQuestion from './components/AskNewQuestion';
 import MagicBall from './components/MagicBall';
 import QuestionForm from './components/QuestionForm';
 
@@ -35,12 +36,12 @@ function App() {
     const [questionAsked, setQuestionAsked] = useState(false);
     const [response, setResponse] = useState("");
     return (
-        <div className="App w-screen h-screen bg-slate-900">
+        <div className="App w-screen h-full min-h-screen bg-slate-900">
             <header className="App-header flex items-center justify-center flex-col py-10">
                 <h1 className="text-3xl font-bold underline text-blue-600 text-center font-rowdies">Magic 8 Ball</h1>
                 <div className='py-10' />
                 {questionAsked ? (<>
-                    
+                    <AskNewQuestion setQuestionAsked={setQuestionAsked}/>
                 </>) : (<>
                     <QuestionForm 
                         setQuestionAsked={setQuestionAsked}
