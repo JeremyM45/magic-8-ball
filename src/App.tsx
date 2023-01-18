@@ -39,11 +39,16 @@ function App() {
             <header className="App-header flex items-center justify-center flex-col py-10">
                 <h1 className="text-3xl font-bold underline text-blue-600 text-center font-rowdies">Magic 8 Ball</h1>
                 <div className='py-10' />
-                <QuestionForm 
-                    setQuestionAsked={setQuestionAsked}
-                    setResponse={setResponse}
-                    responses={RESPONSES}
-                />
+                {questionAsked ? (<>
+                    
+                </>) : (<>
+                    <QuestionForm 
+                        setQuestionAsked={setQuestionAsked}
+                        setResponse={setResponse}
+                        responses={RESPONSES}
+                    />
+                </>)}
+                
                 <div className='py-10' />
                 <MagicBall 
                     response={response}
