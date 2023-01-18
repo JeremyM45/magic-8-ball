@@ -38,6 +38,7 @@ const QuestionForm = ({setQuestionAsked, setResponse, setQuestion, setError, que
                     className='rounded-full px-3 text-2xl w-[20rem]' 
                     placeholder='Ask Your Question'
                     type='text'
+                    required
                     onChange={(e) => setQuestion(e.target.value)}
                 />
                 <div className='py-2' />
