@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import AskNewQuestion from './components/AskNewQuestion';
 import MagicBall from './components/MagicBall';
+import Question from './components/Question';
 import QuestionForm from './components/QuestionForm';
 
 function App() {
@@ -35,21 +36,35 @@ function App() {
     const RESPONSES = [RESPONSES_AFFIRMATIVE, RESPONSES_NONCOMMITTAL, RESPONSES_NEGATIVE];
     const [questionAsked, setQuestionAsked] = useState(false);
     const [response, setResponse] = useState("");
+    const [question, setQuestion] = useState("Ask A Question");
+    const [error, setError] = useState("");
     return (
         <div className="App w-screen h-full min-h-screen bg-slate-900">
             <header className="App-header flex items-center justify-center flex-col py-10">
                 <h1 className="text-3xl font-bold underline text-blue-600 text-center font-rowdies">Magic 8 Ball</h1>
                 <div className='py-10' />
                 {questionAsked ? (<>
-                    <AskNewQuestion setQuestionAsked={setQuestionAsked}/>
+                    <AskNewQuestion 
+                        setQuestionAsked={setQuestionAsked}
+                        setQuestion={setQuestion}
+                    />
+                    <div className='py-10' />
                 </>) : (<>
                     <QuestionForm 
+                        setQuestion={setQuestion}
+                        setError={setError}
                         setQuestionAsked={setQuestionAsked}
                         setResponse={setResponse}
+                        question={question}
                         responses={RESPONSES}
                     />
+                    <div className='py-4' />
                 </>)}
                 
+                <Question 
+                    question={question}
+                    error={error}
+                />
                 <div className='py-10' />
                 <MagicBall 
                     response={response}

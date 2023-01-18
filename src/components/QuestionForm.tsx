@@ -3,12 +3,14 @@ import { useState } from 'react'
 interface QuestionForm {
     setQuestionAsked: (bool: boolean) => void,
     setResponse: (res: string) => void,
+    setError: (res: string) => void,
+    setQuestion: (res: string) => void,
+    question: string,
     responses: string[][]
 }
 
-const QuestionForm = ({setQuestionAsked, setResponse, responses}: QuestionForm) => {
-    const [question, setQuestion] = useState("");
-    const [error, setError] = useState("");
+const QuestionForm = ({setQuestionAsked, setResponse, setQuestion, setError, question, responses}: QuestionForm) => {
+    
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if(question.length > 3)
