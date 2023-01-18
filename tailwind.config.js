@@ -5,6 +5,9 @@ module.exports = {
 ],
     theme: {
     extend: {
+        fontFamily: {
+            'rowdies': ['Rowdies', 'cursive']
+        },
         keyframes: {
                 'fade-in-down': {
                     '0%': {

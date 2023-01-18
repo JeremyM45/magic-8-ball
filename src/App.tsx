@@ -36,10 +36,8 @@ function App() {
     const [response, setResponse] = useState("");
     return (
         <div className="App w-screen h-screen bg-slate-900">
-            <header className="App-header flex items-center justify-center flex-col">
-                <h1 className="text-3xl font-bold underline text-blue-600 text-center">
-                    Magic 8 Ball
-                </h1>
+            <header className="App-header flex items-center justify-center flex-col py-10">
+                <h1 className="text-3xl font-bold underline text-blue-600 text-center font-rowdies">Magic 8 Ball</h1>
                 <div className='py-10' />
                 <QuestionForm 
                     setQuestionAsked={setQuestionAsked}
