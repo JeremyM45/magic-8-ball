@@ -41,7 +41,6 @@ const QuestionForm = ({setQuestionAsked, setResponse, responses}: QuestionForm) 
                 <div className='py-2' />
                 <button type='submit' className='text-blue-500 rounded-full border-blue-700 border px-12 p-2 font-semibold hover:bg-blue-800 hover:text-slate-200 duration-[400ms]'>Ask</button>
             </form>
-            {error.length > 1 && question.length < 3 ? <p className='text-red-600 font-semibold text-xl text-center max-w-[40rem] overflow-auto'>{error}</p> : <p className='text-slate-200 font-semibold text-xl text-center max-w-[40rem] overflow-auto'>{question}</p>}
         </div>
     )
 }
